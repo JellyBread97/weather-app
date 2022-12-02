@@ -41,9 +41,7 @@ export default function MainPage() {
             placeholder="Search for Location"
           />
         </Form>
-        <div>
-          <City city={city} />
-        </div>
+        <div>{city && <City city={city} />}</div>
         <Row>
           <Link to="/search">
             <Button id="seeMore">See More</Button>
