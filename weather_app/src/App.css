@@ -14,6 +14,7 @@
 #container {
   display: grid;
   place-items: center;
+  margin: 0 auto;
   background-color: #04051a;
   border: 3px solid #40024b;
   border-radius: 10px;
@@ -32,10 +33,6 @@
   border-color: transparent;
   width: 20vw;
   text-align: center;
-}
-
-.form-control {
-  outline: none;
 }
 
 #seeMore {
@@ -70,16 +67,4 @@
 #savedLocations:hover {
   background-color: #3b5197;
   border: 1px solid #3b5197;
-}
-
-.row {
-  text-align: center;
-}
-
-#h1 {
-  font-size: 4em;
-}
-
-#city {
-  font-size: 2em;
 }

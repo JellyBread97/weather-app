@@ -1,17 +1,15 @@
 import { Row, Col } from "react-bootstrap";
 import { Link } from "react-router-dom";
 
-const City = ({ data }) => (
-  <Row>
-    <Col>
-      <Link>{data.city.name}</Link>
-    </Col>
-    <Col>
-      <a href={data.city.country} target="_blank" rel="noreferrer">
-        {data.city.temperature.value}
-      </a>
-    </Col>
-  </Row>
-);
+const City = ({ city }) => {
+  console.log("city props", city);
+  return (
+    <Row>
+      <Col>
+        <h1>{city.name}</h1>
+      </Col>
+    </Row>
+  );
+};
 
 export default City;

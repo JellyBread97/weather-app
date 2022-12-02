@@ -5,7 +5,7 @@ import City from "./City";
 
 export default function MainPage() {
   const [query, setQuery] = useState("");
-  const [cities, setCities] = useState([]);
+  const [city, setCities] = useState(null);
 
   const baseEndpoint = "https://api.openweathermap.org/data/2.5/weather?q=";
 
@@ -42,9 +42,7 @@ export default function MainPage() {
           />
         </Form>
         <div>
-          {" "}
-          {/* {locations.map((locationData) => (
-        <p>{locationData._id}</p>))} */}
+          <City city={city} />
         </div>
         <Row>
           <Link to="/search">
