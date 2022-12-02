@@ -2,37 +2,84 @@
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.background {
+  background-image: url(./assets/background.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  height: 100vh;
+  padding-top: 5vh;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+#container {
+  display: grid;
+  place-items: center;
+  background-color: #04051a;
+  border: 3px solid #40024b;
+  border-radius: 10px;
+  width: 40vw;
+  height: 20vh;
+  color: aliceblue;
+  padding-bottom: 20px;
+  padding-top: 20px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.input {
+  padding: 10px;
+  border-radius: 25px;
+  background-color: rgba(255, 255, 255, 0.2);
+  border: 1px;
+  border-color: transparent;
+  width: 20vw;
+  text-align: center;
 }
 
-.App-link {
-  color: #61dafb;
+.form-control {
+  outline: none;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+#seeMore {
+  border-radius: 25px;
+  background-color: #410353;
+  border: 1px solid #410353;
+  margin-right: 20px;
+  width: 8vw;
+}
+
+#seeMore:hover {
+  background-color: #8a1185;
+  border: 1px solid #8a1185;
+}
+
+#container > form > input {
+  background-color: transparent;
+  border: 0;
+  transition: none;
+  text-align: center;
+  color: aliceblue;
+}
+
+#savedLocations {
+  background-color: #0f277f;
+  border: 1px solid #0f277f;
+  border-radius: 25px;
+  margin-left: 20px;
+  width: 8vw;
+}
+
+#savedLocations:hover {
+  background-color: #3b5197;
+  border: 1px solid #3b5197;
+}
+
+.row {
+  text-align: center;
+}
+
+#h1 {
+  font-size: 4em;
+}
+
+#city {
+  font-size: 2em;
 }
