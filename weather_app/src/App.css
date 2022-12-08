@@ -1,3 +1,5 @@
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css");
+
 .App {
   text-align: center;
 }
@@ -72,7 +74,7 @@
   border: 1px solid #3b5197;
 }
 
-p {
+h6 {
   margin-left: 10px;
   margin-right: 10px;
 }

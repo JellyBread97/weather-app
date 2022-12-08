@@ -46,22 +46,25 @@ const MainPage = () => {
         {city.main && (
           <>
             <Container id="container2">
-              <h3>{city.name}</h3>
+              <h1>
+                <i className="bi bi-buildings-fill"></i> {city.name}
+              </h1>
               <Row>
-                <p>
-                  Current Temperature: {(city.main.temp - 273.15).toFixed(2)} ºC
-                </p>
-                <p>
-                  Feels like: {(city.main.feels_like - 273.15).toFixed(2)} ºC
-                </p>
+                <h4>
+                  <i class="bi bi-cloud-sun-fill"></i>{" "}
+                  {(city.main.temp - 273.15).toFixed(2)} ºC
+                </h4>
               </Row>
               <Row>
-                <p>Maximum Temperature: </p>
-                {(city.main.temp_max - 273.15).toFixed(2)} ºC
-                <p>Minimum Temperature: </p>
-                {(city.main.temp_min - 273.15).toFixed(2)} ºC
+                <h6>
+                  <i class="bi bi-thermometer-sun"></i>{" "}
+                  {(city.main.temp_max - 273.15).toFixed(2)} ºC
+                </h6>
+                <h6>
+                  <i class="bi bi-thermometer-snow"></i>{" "}
+                  {(city.main.temp_min - 273.15).toFixed(2)} ºC
+                </h6>
               </Row>
-              <p>Humidity: {city.main.humidity} % </p>
             </Container>
           </>
         )}

@@ -17,7 +17,9 @@ let Datetime = () => {
   return (
     <div id="datetime">
       <center>
-        {dt} - {currentTime}
+        <i class="bi bi-calendar2-week-fill"></i> {dt}
+        {"­ ­ ­ ­­ ­ ­ ­­ ­ ­ ­"}
+        <i class="bi bi-clock-fill"></i> {currentTime}
       </center>
     </div>
   );
