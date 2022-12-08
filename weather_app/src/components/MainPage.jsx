@@ -46,14 +46,14 @@ const MainPage = () => {
         {city.main && (
           <>
             <Container id="container2">
-              <h1>
-                <i className="bi bi-buildings-fill"></i> {city.name}
-              </h1>
+              <h1>{city.name}</h1>
               <Row>
-                <h4>
-                  <i class="bi bi-cloud-sun-fill"></i>{" "}
+                <h2>
+                  <img
+                    src={`http://openweathermap.org/img/wn/${city.weather[0].icon}.png`}
+                  />
                   {(city.main.temp - 273.15).toFixed(1)} ºC
-                </h4>
+                </h2>
               </Row>
               <Row>
                 <h6>
