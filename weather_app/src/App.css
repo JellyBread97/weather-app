@@ -41,6 +41,7 @@
   border: 1px solid #410353;
   margin-right: 20px;
   width: 8vw;
+  margin-top: 35px;
 }
 
 #seeMore:hover {
@@ -53,7 +54,7 @@
   border: 0;
   transition: none;
   text-align: center;
-  color: aliceblue;
+  color: #bcc4bc;
 }
 
 #savedLocations {
@@ -62,9 +63,36 @@
   border-radius: 25px;
   margin-left: 20px;
   width: 8vw;
+  margin-top: 30px;
+  padding: 10px;
 }
 
 #savedLocations:hover {
   background-color: #3b5197;
   border: 1px solid #3b5197;
+}
+
+p {
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+#datetime {
+  margin-bottom: 10px;
+  color: #bcc4bc;
+}
+
+#container2 {
+  position: relative;
+  right: 2.4%;
+  top: 260%;
+  display: grid;
+  place-items: center;
+  background-color: #04051a;
+  border-radius: 10px;
+  width: 40vw;
+  height: 20vh;
+  color: #bcc4bc;
+  padding-bottom: 20px;
+  padding-top: 20px;
 }

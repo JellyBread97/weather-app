@@ -1,28 +1,22 @@
-import { Button, Row, Container, Form } from "react-bootstrap";
-import { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
-import City from "./City";
+import { Container, Form, Button, Row } from "react-bootstrap";
+import { useState } from "react";
+import DateTime from "./DateTime";
 
-export default function MainPage() {
+const MainPage = () => {
   const [query, setQuery] = useState("");
-  const [city, setCities] = useState(null);
+  const [city, setCities] = useState([]);
 
-  const baseEndpoint = "https://api.openweathermap.org/data/2.5/weather?q=";
-
-  const handleChange = (e) => {
-    setQuery(e.target.value);
-  };
-
-  const handleSubmit = async (e) => {
-    e.preventDefault();
+  const handleSubmit = async (event) => {
     try {
       const response = await fetch(
-        baseEndpoint + query + ",&APPID=f659463b0549ba98597434fca08d8a11"
+        `https://api.openweathermap.org/data/2.5/weather?q=${query}&APPID=f659463b0549ba98597434fca08d8a11`
       );
       if (response.ok) {
         const data = await response.json();
         console.log(data);
         setCities(data);
+        setQuery("");
+        console.log(data);
       } else {
         alert("Error fetching results");
       }
@@ -33,22 +27,46 @@ export default function MainPage() {
   return (
     <>
       <Container id="container">
-        <Form className="input" onSubmit={handleSubmit}>
+        <DateTime />
+        <Form className="input">
           <Form.Control
             type="search"
             value={query}
-            onChange={handleChange}
+            onChange={(event) => setQuery(event.target.value)}
             placeholder="Search for Location"
           />
         </Form>
-        <div>{city && <City city={city} />}</div>
         <Row>
-          <Link to="/search">
-            <Button id="seeMore">See More</Button>
-          </Link>
+          <Button id="seeMore" onClick={handleSubmit}>
+            Search Location
+          </Button>
           <Button id="savedLocations">Saved Locations</Button>
         </Row>
+        <Container id="container2">
+          {city.main && (
+            <>
+              <h3>{city.name}</h3>
+              <Row>
+                <p>
+                  Current Temperature: {(city.main.temp - 273.15).toFixed(2)} ºC
+                </p>
+                <p>
+                  Feels like: {(city.main.feels_like - 273.15).toFixed(2)} ºC
+                </p>
+              </Row>
+              <Row>
+                <p>Maximum Temperature: </p>
+                {(city.main.temp_max - 273.15).toFixed(2)} ºC
+                <p>Minimum Temperature: </p>
+                {(city.main.temp_min - 273.15).toFixed(2)} ºC
+              </Row>
+              <p>Humidity: {city.main.humidity} % </p>
+            </>
+          )}
+        </Container>
       </Container>
     </>
   );
-}
+};
+
+export default MainPage;

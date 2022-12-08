@@ -1,5 +1,5 @@
 import React from "react";
-import { Button, Col, Row, Container } from "react-bootstrap";
+import { Button, Row, Container } from "react-bootstrap";
 import { Link } from "react-router-dom";
 
 class SearchCities extends React.Component {

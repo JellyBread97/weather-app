@@ -1,6 +1,6 @@
 import React from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
-import { Button, Col, Row, Container } from "react-bootstrap";
+import { Button, Row, Container } from "react-bootstrap";
 import { Link } from "react-router-dom";
 
 class SavedCities extends React.Component {
