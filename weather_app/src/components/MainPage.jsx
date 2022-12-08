@@ -52,17 +52,17 @@ const MainPage = () => {
               <Row>
                 <h4>
                   <i class="bi bi-cloud-sun-fill"></i>{" "}
-                  {(city.main.temp - 273.15).toFixed(2)} ºC
+                  {(city.main.temp - 273.15).toFixed(1)} ºC
                 </h4>
               </Row>
               <Row>
                 <h6>
                   <i class="bi bi-thermometer-sun"></i>{" "}
-                  {(city.main.temp_max - 273.15).toFixed(2)} ºC
+                  {(city.main.temp_max - 273.15).toFixed(1)} ºC
                 </h6>
                 <h6>
                   <i class="bi bi-thermometer-snow"></i>{" "}
-                  {(city.main.temp_min - 273.15).toFixed(2)} ºC
+                  {(city.main.temp_min - 273.15).toFixed(1)} ºC
                 </h6>
               </Row>
             </Container>
