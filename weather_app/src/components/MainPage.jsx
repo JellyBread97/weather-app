@@ -42,9 +42,10 @@ const MainPage = () => {
           </Button>
           <Button id="savedLocations">Saved Locations</Button>
         </Row>
-        <Container id="container2">
-          {city.main && (
-            <>
+
+        {city.main && (
+          <>
+            <Container id="container2">
               <h3>{city.name}</h3>
               <Row>
                 <p>
@@ -61,9 +62,9 @@ const MainPage = () => {
                 {(city.main.temp_min - 273.15).toFixed(2)} ºC
               </Row>
               <p>Humidity: {city.main.humidity} % </p>
-            </>
-          )}
-        </Container>
+            </Container>
+          </>
+        )}
       </Container>
     </>
   );
